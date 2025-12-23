@@ -7,6 +7,8 @@
 > ### ✅Easier revalidation during future STIG scans
 > ### ✅A direct operational link between STIG guidance and system administration
 
+<img width="528" height="617" alt="wHiOENp" src="https://github.com/user-attachments/assets/8f836301-11a1-4d0b-b4f0-291b63bbd580" />
+
 ## 📄 STIG Policy Enforcement-Chicago Hospital
 ### [👉📄Policy Enforcement-Chicago Hospital](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/STIG-Continuity%20Policy.pdf) 
 ### Establish and enforce least privilege and standardized security baselines on Ubuntu systems using DISA STIG guidelines. This policy ensures system integrity, protects sensitive data, and supports ongoing compliance.
