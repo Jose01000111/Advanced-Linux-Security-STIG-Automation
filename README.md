@@ -87,4 +87,36 @@
 
 > #### 📄 `apt update && apt upgrade -y` — applies latest security patches ✅
 
+## 🔒 Final Conclusion – STIG Continuity Lab
+
+### 📘 Lessons Learned
+- Implementing **least privilege controls** consistently across systems reduces the risk of accidental or unauthorized changes.
+- Automating **user and group management** ensures compliance with organizational policies and STIG guidelines.
+- Applying **file permission hardening** protects sensitive system files from unauthorized access.
+- Disabling **legacy and insecure services** minimizes the system attack surface.
+- Hardening **SSH configuration** enforces secure remote access for administrators.
+- Regular **system updates and patch management** maintain long-term compliance and security.
+- Using **repeatable Bash scripts** ensures STIG controls are **auditable, consistent, and easily re-deployable**.
+
+### 🛠️ Tech Stack
+| Component / Tool                  | Purpose / Use Case                                   |
+|----------------------------------|----------------------------------------------------|
+| **Ubuntu 22.04 LTS**              | Operating system for lab environment and STIG hardening |
+| **Bash**                           | Scripting language for automation of STIG tasks   |
+| **chmod, chgrp, useradd, passwd** | Enforce file permissions, group ownership, and create hardened users |
+| **systemctl**                       | Manage and disable insecure services              |
+| **sed**                             | Modify configuration files (SSH hardening)       |
+| **OpenSCAP (optional)**             | Validate STIG compliance with automated scanning |
+| **APT (apt update & upgrade)**      | Apply system updates and security patches        |
+| **Nano / Vim**                      | Editing scripts and configuration files          |
+
+### ✅ Key Takeaways
+- Automation is **critical for maintaining STIG compliance** over time.  
+- Proper documentation and **script headers** make audits and future updates easier.  
+- Testing in a **non-production environment** ensures reliability and safety.  
+- Consistency and repeatability are as important as individual security controls.  
+
+> By following these scripts and policies, administrators can maintain a **secure, compliant, and auditable Linux environment**, aligning with DISA STIG guidelines and organizational security standards.
+
+
 
