@@ -2,24 +2,15 @@
 
 ## 📘 Lab Description & Purpose
 ### This lab focuses on **maintaining continuity within the DISA STIG framework** by translating documented STIG requirements into **repeatable, auditable Bash scripts**. The purpose of this lab is to ensure Linux hardening actions are **consistent, reusable, and enforceable over time**, rather than one-time manual fixes.
-
-### By implementing STIG-aligned Bash scripts, this lab supports:
 > ### ✅Configuration standardization
 > ### ✅Compliance continuity across systems
 > ### ✅Easier revalidation during future STIG scans
 > ### ✅A direct operational link between STIG guidance and system administration
 
-## 📂 STIG Automation Scripts – Chicago Hospital
+## 📄 STIG Policy Enforcement-Chicago Hospital
+### [👉📄Policy Enforcement-Chicago Hospital]() 
+**Purpose:** Establish and enforce least privilege and standardized security baselines on Ubuntu systems using DISA STIG guidelines. This policy ensures system integrity, protects sensitive data, and supports ongoing compliance.
 
-### Script Links
-### [👉📄 Sticky Bits Enforcement](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/01_stig_enforcement_sticky_bits.sh)
-### [👉📄 Create Hardened User Accounts](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/02_stig_enforcement_create_user.sh)
-### [👉📄 Group Directory Permissions](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/03_stig_enforcement_group_permissions.sh)
-### [👉📄 Audit Users & Groups](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/04_stig_enforcement_audit_users_groups.sh)
-### [👉📄 File Permissions Hardening](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/05_stig_enforcement_file_permissions.sh)
-### [👉📄 Remove Insecure Services](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/06_stig_enforcement_remove_services.sh)
-### [👉📄 Secure SSH Configuration](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/07_stig_enforcement_secure_ssh.sh)
-### [👉📄 System Update & Patch Management](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/08_stig_enforcement_update_system.sh)
 
 
 ## 🛡️ STIG Linux Hardening Overview
