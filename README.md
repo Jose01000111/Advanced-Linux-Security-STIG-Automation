@@ -1,1 +1,72 @@
-# 🚧🛠️ Advanced Linux Security STIG Automation — Under Construction! 🚀
+# 🔒 STIG Continuity Lab: Bash-Based Linux Hardening Automation
+
+## 📘 Lab Description & Purpose
+### This lab focuses on **maintaining continuity within the DISA STIG framework** by translating documented STIG requirements into **repeatable, auditable Bash scripts**. The purpose of this lab is to ensure Linux hardening actions are **consistent, reusable, and enforceable over time**, rather than one-time manual fixes.
+
+### By implementing STIG-aligned Bash scripts, this lab supports:
+> ### ✅Configuration standardization
+> ### ✅Compliance continuity across systems
+> ### ✅Easier revalidation during future STIG scans
+> ### ✅A direct operational link between STIG guidance and system administration
+
+## 🛡️ STIG Linux Hardening Overview
+
+### 1️⃣ Sticky Bits for Shared Directories
+**Purpose:** Ensures only the file owner can delete or rename files in shared directories, protecting against unauthorized deletion in world-writable locations. 
+
+#### 📄 `/tmp` & `/var/tmp` — enforces sticky bit on shared temporary directories ✅
+
+---
+
+### 2️⃣ Secure User Creation
+**Purpose:** Creates new users with STIG-aligned default configurations and secure passwords. 
+
+#### 📄 `useradd -k /etc/skel_stig` — applies hardened skeleton for new users ✅  
+#### 📄 `passwd` — sets a secure password for the new account ✅
+
+---
+
+### 3️⃣ Group Skeletons and Permissions
+**Purpose:** Restricts access to group directories, ensuring only authorized members can access files, supporting least privilege access control.
+
+#### 📄 `/home/groups/<group>` — group directories for controlled access ✅  
+#### 📄 `chmod 770` & `chgrp <group>` — enforces proper ownership and permissions ✅
+
+---
+
+### 4️⃣ Audit Users and Groups
+**Purpose:** Provides visibility into users and groups to validate alignment with organizational policies and STIG compliance.
+
+#### 📄 `awk -F: '$3 >= 1000' /etc/passwd` — lists all non-system users ✅  
+#### 📄 `getent group` — lists groups and their members for auditing ✅
+
+---
+
+### 5️⃣ File Permission Hardening
+**Purpose:** Protects sensitive system files from unauthorized access or modification.
+
+#### 📄 `/etc/shadow` & `/etc/gshadow` — restricts access to authentication data ✅  
+#### 📄 `/etc/passwd` — ensures general system file permissions are properly set ✅
+
+---
+
+### 6️⃣ Remove Unnecessary Services
+**Purpose:** Reduces the system attack surface by disabling deprecated or insecure services.
+
+#### 📄 `systemctl disable/stop telnet.socket` & `rsh.socket` — disables insecure legacy services ✅
+
+---
+
+### 7️⃣ Secure SSH Configuration
+**Purpose:** Prevents direct root login and enforces strong authentication for remote access.
+
+#### 📄 `/etc/ssh/sshd_config` — disables root login (`PermitRootLogin no`) and enforces key-based authentication ✅
+
+---
+
+### 8️⃣ System Updates and Patch Management
+**Purpose:** Ensures the system remains protected against known vulnerabilities and maintains STIG compliance.
+
+#### 📄 `apt update && apt upgrade -y` — applies latest security patches ✅
+
+
