@@ -8,22 +8,22 @@
 > ### ✅A direct operational link between STIG guidance and system administration
 
 ## 📄 STIG Policy Enforcement-Chicago Hospital
-### [👉📄Policy Enforcement-Chicago Hospital]() 
-**Purpose:** Establish and enforce least privilege and standardized security baselines on Ubuntu systems using DISA STIG guidelines. This policy ensures system integrity, protects sensitive data, and supports ongoing compliance.
+### [👉📄Policy Enforcement-Chicago Hospital](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/STIG-Continuity%20Policy.pdf) 
+### Establish and enforce least privilege and standardized security baselines on Ubuntu systems using DISA STIG guidelines. This policy ensures system integrity, protects sensitive data, and supports ongoing compliance.
 
 
 
 ## 🛡️ STIG Linux Hardening Overview
 
 ### 1️⃣ Sticky Bits for Shared Directories
-**Purpose:** Ensures only the file owner can delete or rename files in shared directories, protecting against unauthorized deletion in world-writable locations. 
+### Ensures only the file owner can delete or rename files in shared directories, protecting against unauthorized deletion in world-writable locations. 
 ### [👉📄 Sticky Bits Enforcement](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/01_stig_enforcement_sticky_bits.sh)
 > #### 📄 `/tmp` & `/var/tmp` — enforces sticky bit on shared temporary directories ✅
 
 ---
 
 ### 2️⃣ Secure User Creation
-**Purpose:** Creates new users with STIG-aligned default configurations and secure passwords. 
+### Creates new users with STIG-aligned default configurations and secure passwords. 
 ### [👉📄 Create Hardened User Accounts](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/02_stig_enforcement_create_user.sh)
 > #### 📄 `useradd -k /etc/skel_stig` — applies hardened skeleton for new users ✅  
 > #### 📄 `passwd` — sets a secure password for the new account ✅
@@ -31,7 +31,7 @@
 ---
 
 ### 3️⃣ Group Skeletons and Permissions
-**Purpose:** Restricts access to group directories, ensuring only authorized members can access files, supporting least privilege access control.
+### Restricts access to group directories, ensuring only authorized members can access files, supporting least privilege access control.
 ### [👉📄 Group Directory Permissions](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/03_stig_enforcement_group_permissions.sh)
 > #### 📄 `/home/groups/<group>` — group directories for controlled access ✅  
 > #### 📄 `chmod 770` & `chgrp <group>` — enforces proper ownership and permissions ✅
@@ -39,7 +39,7 @@
 ---
 
 ### 4️⃣ Audit Users and Groups
-**Purpose:** Provides visibility into users and groups to validate alignment with organizational policies and STIG compliance.
+### Provides visibility into users and groups to validate alignment with organizational policies and STIG compliance.
 ### [👉📄 Audit Users & Groups](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/04_stig_enforcement_audit_users_groups.sh)
 > #### 📄 `awk -F: '$3 >= 1000' /etc/passwd` — lists all non-system users ✅  
 > #### 📄 `getent group` — lists groups and their members for auditing ✅
@@ -47,7 +47,7 @@
 ---
 
 ### 5️⃣ File Permission Hardening
-**Purpose:** Protects sensitive system files from unauthorized access or modification.
+### Protects sensitive system files from unauthorized access or modification.
 ### [👉📄 File Permissions Hardening](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/05_stig_enforcement_file_permissions.sh)
 > #### 📄 `/etc/shadow` & `/etc/gshadow` — restricts access to authentication data ✅  
 > #### 📄 `/etc/passwd` — ensures general system file permissions are properly set ✅
@@ -55,21 +55,21 @@
 ---
 
 ### 6️⃣ Remove Unnecessary Services
-**Purpose:** Reduces the system attack surface by disabling deprecated or insecure services.
+### Reduces the system attack surface by disabling deprecated or insecure services.
 ### [👉📄 Remove Insecure Services](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/06_stig_enforcement_remove_services.sh)
 > #### 📄 `systemctl disable/stop telnet.socket` & `rsh.socket` — disables insecure legacy services ✅
 
 ---
 
 ### 7️⃣ Secure SSH Configuration
-**Purpose:** Prevents direct root login and enforces strong authentication for remote access.
+### Prevents direct root login and enforces strong authentication for remote access.
 ### [👉📄 Secure SSH Configuration](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/07_stig_enforcement_secure_ssh.sh)
 > #### 📄 `/etc/ssh/sshd_config` — disables root login (`PermitRootLogin no`) and enforces key-based authentication ✅
 
 ---
 
 ### 8️⃣ System Updates and Patch Management
-**Purpose:** Ensures the system remains protected against known vulnerabilities and maintains STIG compliance.
+### Ensures the system remains protected against known vulnerabilities and maintains STIG compliance.
 ### [👉📄 System Update & Patch Management](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/08_stig_enforcement_update_system.sh)
 > #### 📄 `apt update && apt upgrade -y` — applies latest security patches ✅
 
