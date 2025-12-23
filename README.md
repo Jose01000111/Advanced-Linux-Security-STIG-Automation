@@ -11,10 +11,6 @@
 ### [👉📄Policy Enforcement-Chicago Hospital](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/STIG-Continuity%20Policy.pdf) 
 ### Establish and enforce least privilege and standardized security baselines on Ubuntu systems using DISA STIG guidelines. This policy ensures system integrity, protects sensitive data, and supports ongoing compliance.
 
-
-
-## 🛡️ STIG Linux Hardening Overview
-
 ### 1️⃣ Sticky Bits for Shared Directories
 ### Ensures only the file owner can delete or rename files in shared directories, protecting against unauthorized deletion in world-writable locations. 
 ### [👉📄 Sticky Bits Enforcement](https://github.com/Jose01000111/Advanced-Linux-Security-STIG-Automation/blob/main/01_stig_enforcement_sticky_bits.sh)
